@@ -11,7 +11,7 @@
 
         <div class="navbar-brand py-2">
             <a href="/" class="gambar">
-                <img src="{{ asset('assets/img/icons/spot-illustrations/falcon.png') }}" alt="" width="40" />
+                <img src="https://tamiajeng.my.id/desa/logo/Desain__sid__fFcxJnC.png" alt="" width="40" />
             </a>
             <a href="" class="desa"><span class="font-sans-serif" style="font-size: 16px;">Desa Tamiajeng</span></a>
             <a href="">
@@ -20,7 +20,7 @@
 
         </div>
 
-        
+
 
     </div>
     <div class="collapse navbar-collapse scrollbar" id="navbarVerticalCollapse">
@@ -29,7 +29,7 @@
                 {{-- beranda --}}
                 <li class="nav-item">
                     <!-- parent pages-->
-                    <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="dashboard">
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="#" role="button" aria-expanded="false">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon">
                                 <span class="fas fa-home"></span>
@@ -47,74 +47,32 @@
                         </div>
                     </div>
                     <!-- parent pages-->
-                    <a class="nav-link" href="../app/calendar.html" role="button" aria-expanded="false">
+
+                   @include('layouts.partials.sidebar.aparatur-desa')
+                    
+                   @include('layouts.partials.sidebar.profile-desa')
+                   @include('layouts.partials.sidebar.data-desa')
+                   @include('layouts.partials.sidebar.pemerintahan-desa')
+                   @include('layouts.partials.sidebar.regulasi')
+                    
+                    <!-- parent pages-->
+                    <a class="nav-link" href="../app/chat.html" role="button" aria-expanded="false">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon">
-                                <span class="fas fa-calendar-alt"></span>
+                                <span class="fas fa-store"></span>
                             </span>
-                            <span class="nav-link-text ps-1">Calendar</span>
+                            <span class="nav-link-text ps-1">Lapak Desa</span>
                         </div>
                     </a>
                     <!-- parent pages-->
                     <a class="nav-link" href="../app/chat.html" role="button" aria-expanded="false">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon">
-                                <span class="fas fa-comments"></span>
+                                <span class="fas fa-people-carry"></span>
                             </span>
-                            <span class="nav-link-text ps-1">Chat</span>
+                            <span class="nav-link-text ps-1">Proyek Desa</span>
                         </div>
                     </a>
-                    <!-- parent pages-->
-                    <a class="nav-link dropdown-indicator" href="#email" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="email">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <span class="fas fa-envelope-open"></span>
-                            </span>
-                            <span class="nav-link-text ps-1">Profile Desa</span>
-                        </div>
-                    </a>
-                    <ul class="nav collapse false" id="email">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Profile Wilayah Desa</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Sejarah Desa</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                    </ul>
-                    <!-- parent pages-->
-                    <a class="nav-link dropdown-indicator" href="#events" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="events">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <span class="fas fa-calendar-day"></span>
-                            </span>
-                            <span class="nav-link-text ps-1">Pemerintahan Desa</span>
-                        </div>
-                    </a>
-                    <ul class="nav collapse false" id="events">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Visi dan Misi</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../app/events/event-detail.html" aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Sturktur Desa</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                    </ul>
-
 
                 </li>
 
@@ -122,5 +80,3 @@
         </div>
     </div>
 </nav>
-
-    

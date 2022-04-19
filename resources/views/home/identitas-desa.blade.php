@@ -14,10 +14,35 @@
         </div>
         <div class="card mb-2">
             <div class="card-body overflow-hidden pt-0 pb-0">
-                <div class="collapse" id="identitasdesa">
-                    <div class="bg-dark">
-                        <span>sk</span>
-                    </div>
+                <div class="collapse mt-3" id="identitasdesa">
+                <table id="table-agenda" width="100%">
+		<tbody><tr>
+			<td width="47%" style="vertical-align:top;">Nama Desa</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"><b> {{ $identitas->namaDesa }}</b></td>
+		</tr>
+		<tr>
+			<td width="47%" style="vertical-align:top;">Kecamatan</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"> {{ $identitas->namaKecamatan }}</td>
+		</tr>
+		<tr>
+			<td width="47%" style="vertical-align:top;">Kabupaten</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"> {{ $identitas->namaKabupaten }}</td>
+		</tr>
+		<tr>
+			<td width="47%" style="vertical-align:top;">Provinsi</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"> {{ $identitas->namaProvinsi }}</td>
+		</tr>
+		<tr>
+			<td width="47%" style="vertical-align:top;">Kode Pos</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"> 61375</td>
+		</tr>
+	</tbody></table>
+                        
                 </div>
             </div>
         </div>
@@ -35,10 +60,29 @@
         </div>
         <div class="card">
             <div class="card-body overflow-hidden pt-0 pb-0">
-                <div class="collapse" id="pemerintahdesa">
-                    <div class="bg-dark">
-                        <span>sk</span>
-                    </div>
+                <div class="collapse mt-3" id="pemerintahdesa">
+                <table id="table-agenda" width="100%">
+		<tbody><tr>
+			<td width="47%" style="vertical-align:top;">Nama Desa</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"><b> {{ $pemerintahan->namaKepalaDesa }}</b></td>
+		</tr>
+		<tr>
+			<td width="47%" style="vertical-align:top;">Kecamatan</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"> {{ $pemerintahan->kantor }}</td>
+		</tr>
+		<tr>
+			<td width="47%" style="vertical-align:top;">Kabupaten</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"> {{ $pemerintahan->telp }}</td>
+		</tr>
+		<tr>
+			<td width="47%" style="vertical-align:top;">Provinsi</td>
+			<td width="3%" style="vertical-align:top;">:</td>
+			<td width="50%" style="text-align:left;vertical-align:top"> {{ $pemerintahan->email }}</td>
+		</tr>
+	</tbody></table>
                 </div>
             </div>
         </div>
